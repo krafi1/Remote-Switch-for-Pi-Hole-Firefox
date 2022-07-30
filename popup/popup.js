@@ -8,11 +8,11 @@ function buttonClicked(){
     if(document.getElementById("button1").value == "Disable"){  //If the Pi-Hole is currently ENABLED
         var time = document.getElementById("time").value;   //get the time from the box
         time = time * 60;   //get it in minutes
-        url = "http://pi.hole/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;  //build the url
+        url = "http://192.168.178.23/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;  //build the url
     }
 
     else if(document.getElementById("button1").value == "Enable"){  //If the Pi-Hole is currently DISABLED
-        url = "http://pi.hole/admin/api.php?enable&auth=" + API_KEY;    //build the url
+        url = "http://192.168.178.23/admin/api.php?enable&auth=" + API_KEY;    //build the url
     }
 
      httpResponse.addEventListener("load", setStatus);  //add listener for the xmlResponse
@@ -28,7 +28,7 @@ function getPiHoleStatus(){
     var httpResponse = new XMLHttpRequest();    //make a new request object
     httpResponse.addEventListener("load", setStatus);   //add listener to the load
     httpResponse.addEventListener("error", statusError);    //add listener to error
-    httpResponse.open("GET", "http://pi.hole/admin/api.php?");  //set up get
+    httpResponse.open("GET", "http://192.168.178.23/admin/api.php?");  //set up get
     httpResponse.send();    //send it to the server
 }
 
@@ -94,9 +94,9 @@ document.getElementById("quick-btn-1").addEventListener("click", function(){
 
     if(document.getElementById("button1").value == "Disable") {
         var time = 10;
-        url = "http://pi.hole/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
     } else if(document.getElementById("button1").value == "Enable"){ 
-        url = "http://pi.hole/admin/api.php?enable&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?enable&auth=" + API_KEY;
     }
 
     httpResponse.addEventListener("load", setStatus);
@@ -112,9 +112,9 @@ document.getElementById("quick-btn-2").addEventListener("click", function(){
 
     if(document.getElementById("button1").value == "Disable") {
         var time = 30;
-        url = "http://pi.hole/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
     } else if(document.getElementById("button1").value == "Enable"){ 
-        url = "http://pi.hole/admin/api.php?enable&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?enable&auth=" + API_KEY;
     }
 
     httpResponse.addEventListener("load", setStatus);
@@ -130,9 +130,9 @@ document.getElementById("quick-btn-3").addEventListener("click", function(){
 
     if(document.getElementById("button1").value == "Disable") {
         var time = 5 * 60;
-        url = "http://pi.hole/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
     } else if(document.getElementById("button1").value == "Enable"){ 
-        url = "http://pi.hole/admin/api.php?enable&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?enable&auth=" + API_KEY;
     }
 
     httpResponse.addEventListener("load", setStatus);
@@ -148,9 +148,9 @@ document.getElementById("quick-btn-4").addEventListener("click", function(){
 
     if(document.getElementById("button1").value == "Disable") {
         var time = 0;
-        url = "http://pi.hole/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?disable=" + String(time) + "&auth=" + API_KEY;
     } else if(document.getElementById("button1").value == "Enable"){ 
-        url = "http://pi.hole/admin/api.php?enable&auth=" + API_KEY;
+        url = "http://192.168.178.23/admin/api.php?enable&auth=" + API_KEY;
     }
 
     httpResponse.addEventListener("load", setStatus);

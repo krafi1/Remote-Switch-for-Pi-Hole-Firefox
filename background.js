@@ -6,7 +6,7 @@ function checkStatus(){
     var httpResponse = new XMLHttpRequest();    //make a new request
     httpResponse.addEventListener("load", setStatus);   //add event listeners
     httpResponse.addEventListener("error", statusError);
-    httpResponse.open("GET", "http://pi.hole/admin/api.php?");  //URL to pi hole
+    httpResponse.open("GET", "http://192.168.178.23/admin/api.php?");  //URL to pi hole
     httpResponse.send();
 }
 

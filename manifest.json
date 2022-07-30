@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "Remote Switch for Pi-Hole",
-    "version": "2.0",
-    "author": "Spencer Yoder",
+    "version": "2.1",
+    "author": "Spencer Yoder (forked by Krafi)",
 
-    "description": "Lets you Enable/Disable a Pi-Hole with out opening a new tab.",
+    "description": "Lets you enable/disable a Pi-Hole with out opening a new tab.",
   
     "icons": {
       "48": "icon/icon-48.png",
@@ -32,5 +32,6 @@
       "permissions": [
         "storage",
         "http://pi.hole/*",
+        "http://192.168.178.23/*",
         "webRequest"]
   }
